@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Harry Potter API Rest</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="abraham_ram_rez_hern_ndez">Abraham Ramírez Hernández</string>
+    <string name="harry_potter">Harry Potter</string>
 </resources>
