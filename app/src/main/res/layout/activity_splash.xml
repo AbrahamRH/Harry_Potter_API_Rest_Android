@@ -14,7 +14,7 @@
         android:layout_marginTop="100dp"
         android:fontFamily="@font/harrytitle"
         android:text="@string/harry_potter"
-        android:textColor="@color/gold"
+        android:textColor="@color/yellow"
         android:textSize="96sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -44,7 +44,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/harrytitle"
         android:text="@string/version_1_0"
-        android:textColor="#d3a625"
+        android:textColor="@color/gold"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

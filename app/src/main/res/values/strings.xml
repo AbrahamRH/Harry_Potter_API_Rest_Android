@@ -3,4 +3,8 @@
     <string name="version_1_0">Version 1.0</string>
     <string name="abraham_ram_rez_hern_ndez">Abraham Ramírez Hernández</string>
     <string name="harry_potter">Harry Potter</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="escoge_una_opci_n">Escoge una opción.</string>
+    <string name="estudiantes">Estudiantes</string>
+    <string name="profesores">Profesores</string>
 </resources>
