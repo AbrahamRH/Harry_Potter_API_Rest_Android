@@ -7,4 +7,6 @@
     <string name="escoge_una_opci_n">Escoge una opción.</string>
     <string name="estudiantes">Estudiantes</string>
     <string name="profesores">Profesores</string>
+    <string name="and_the">And The</string>
+    <string name="api">API</string>
 </resources>

@@ -3,14 +3,14 @@ package com.abrahamrh.harrypotter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.abrahamrh.harrypotter.databinding.ActivityMainBinding
+import com.abrahamrh.harrypotter.databinding.ActivitySplashBinding
 import kotlin.concurrent.thread
 
 class Splash : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySplashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         thread {
