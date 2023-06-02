@@ -22,47 +22,87 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.09" />
 
-    <TextView
-        android:id="@+id/tvInstructions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/wizard"
-        android:text="@string/escoge_una_opci_n"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleMain" />
-
     <Button
         android:id="@+id/btnStudents"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="172dp"
         android:backgroundTint="@color/darkRed"
         android:fontFamily="@font/harrytitle"
         android:text="@string/estudiantes"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleMain" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/students_icon"
+        app:layout_constraintBottom_toTopOf="@+id/btnStudents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleMain"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ron" />
 
     <Button
         android:id="@+id/btnProfesors"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="104dp"
         android:backgroundTint="@color/darkRed"
         android:fontFamily="@font/harrytitle"
         android:text="@string/profesores"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStudents" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/profesors_icon"
+        app:layout_constraintBottom_toTopOf="@+id/btnProfesors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStudents"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mcgonagall" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleMain"
+        app:srcCompat="@drawable/snitch"
+        android:contentDescription="@string/snitch" />
+
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/wizard"
+        android:text="@string/escoge_una_opci_n"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleMain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

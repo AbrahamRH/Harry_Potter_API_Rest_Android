@@ -9,4 +9,7 @@
     <string name="profesores">Profesores</string>
     <string name="and_the">And The</string>
     <string name="api">API</string>
+    <string name="profesors_icon">Profesors icon</string>
+    <string name="students_icon">students icon</string>
+    <string name="snitch">Snitch</string>
 </resources>
