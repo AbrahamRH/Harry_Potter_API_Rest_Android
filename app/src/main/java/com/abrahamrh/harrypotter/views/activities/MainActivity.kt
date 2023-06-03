@@ -1,4 +1,4 @@
-package com.abrahamrh.harrypotter
+package com.abrahamrh.harrypotter.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

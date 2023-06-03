@@ -1,4 +1,4 @@
-package com.abrahamrh.harrypotter
+package com.abrahamrh.harrypotter.views.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
