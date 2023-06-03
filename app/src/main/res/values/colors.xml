@@ -5,4 +5,7 @@
     <color name="gold">#946b2d</color>
     <color name="yellow">#d3a625</color>
     <color name="darkRed">#740001</color>
+    <color name="blue">#222f5b</color>
+    <color name="gray">#bebebe</color>
+    <color name="silver">#5d5d5d</color>
 </resources>
