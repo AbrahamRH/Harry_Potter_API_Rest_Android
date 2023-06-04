@@ -16,10 +16,18 @@ class MainActivity : AppCompatActivity() {
 
     fun students(view: View) {
         val intent = Intent(this, CharactersList::class.java)
+        val bundle = Bundle()
+        bundle.putString("endpoint","characters/students")
+        intent.putExtras(bundle)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
     }
     fun profesors(view: View) {
         val intent = Intent(this, CharactersList::class.java)
+        val bundle = Bundle()
+        bundle.putString("endpoint","characters/staff")
+        intent.putExtras(bundle)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
     }
 }
