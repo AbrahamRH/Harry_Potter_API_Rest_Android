@@ -1,11 +1,10 @@
 package com.abrahamrh.harrypotter.views.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.abrahamrh.harrypotter.databinding.ActivityCharactersListBinding
 import com.abrahamrh.harrypotter.model.Character
@@ -31,6 +30,7 @@ class CharactersList : AppCompatActivity() {
                 .create(HarryPotterAPI::class.java)
                 .getCharacters(bundle.getString("endpoint"))
 
+            Log.d("DEBUG", "request - ${call.request()}")
             call.enqueue(object: Callback<ArrayList<Character>>{
                 override fun onResponse(
                     call: Call<ArrayList<Character>>,
@@ -38,11 +38,21 @@ class CharactersList : AppCompatActivity() {
                 ) {
                     binding.pbConexion.visibility = View.GONE
                     binding.rvMenu.layoutManager = LinearLayoutManager(this@CharactersList)
-                    binding.rvMenu.adapter = CharactersAdapter(this@CharactersList, response.body()!!,)
+                    binding.rvMenu.adapter = CharactersAdapter(this@CharactersList, response.body()!!) {
+                        selectedCharacter: Character -> characterClicked(selectedCharacter)
+                    }
                 }
 
                 override fun onFailure(call: Call<ArrayList<Character>>, t: Throwable) {
                     binding.pbConexion.visibility = View.GONE
+                }
+
+                private fun characterClicked(character: Character){
+                    val bund = Bundle()
+                    bund.putString("id",character.id)
+                    val intent = Intent(this@CharactersList, DetailCharacter::class.java)
+                    intent.putExtras(bund)
+                    startActivity(intent)
                 }
 
             })

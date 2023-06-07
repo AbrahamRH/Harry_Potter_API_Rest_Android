@@ -7,6 +7,6 @@ data class CharacterDetail(
     var species: String?,
     var dateOfBirth: String?,
     var patronus: String?,
-    var hairColour: String?,
+    var wizard: Boolean?,
     var ancestry: String?,
 )

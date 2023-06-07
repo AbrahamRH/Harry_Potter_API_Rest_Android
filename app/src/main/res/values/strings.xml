@@ -12,4 +12,11 @@
     <string name="profesors_icon">Profesors icon</string>
     <string name="students_icon">students icon</string>
     <string name="snitch">Snitch</string>
+    <string name="tiene_habilidades_m_gicas">¿Tiene habilidades mágicas?</string>
+    <string name="patronus">Patronus:</string>
+    <string name="especie">Especie:</string>
+    <string name="ancestro">Ancestro:</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento:</string>
+    <string name="Si">Si</string>
+    <string name="No">No</string>
 </resources>

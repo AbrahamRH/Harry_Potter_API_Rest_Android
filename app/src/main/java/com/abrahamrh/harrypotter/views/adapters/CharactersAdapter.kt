@@ -1,7 +1,6 @@
 package com.abrahamrh.harrypotter.views.adapters
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +11,7 @@ import com.bumptech.glide.Glide
 class CharactersAdapter(
     private var context: Context,
     private var characters: ArrayList<Character>,
+    private var clickedListener: (Character) -> Unit
 ) :
     RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
@@ -39,6 +39,7 @@ class CharactersAdapter(
             .load(characters[position].image)
             .into(holder.ivThumbnail)
         holder.itemView.setOnClickListener {
+            clickedListener(characters[position])
         }
     }
 }

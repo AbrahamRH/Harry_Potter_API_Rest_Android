@@ -17,5 +17,5 @@ interface HarryPotterAPI {
     @GET("character/{id}")
     fun getCharacter(
         @Path("id") id: String?
-    ) : Call<CharacterDetail>
+    ) : Call<ArrayList<CharacterDetail>>
 }

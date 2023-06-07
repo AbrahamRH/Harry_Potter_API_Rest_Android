@@ -5,8 +5,12 @@
     <color name="gold">#946b2d</color>
     <color name="yellow">#d3a625</color>
     <color name="darkRed">#740001</color>
-    <color name="blue">#222f5b</color>
+    <color name="blue">#5F5178</color>
     <color name="gray">#bebebe</color>
     <color name="silver">#5d5d5d</color>
     <color name="powder">#FAFDF6</color>
+    <color name="purple">#3D348B</color>
+    <color name="brown">#483E32</color>
+    <color name="DarkBlue">#2E4867</color>
+    <color name="LightYellow">#BCB18E</color>
 </resources>
