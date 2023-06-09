@@ -58,17 +58,17 @@
         android:id="@+id/btnProfesors"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="84dp"
         android:backgroundTint="@color/blue"
-        android:fontFamily="@font/harrytitle"
-        android:text="@string/profesores"
         android:clickable="true"
         android:focusable="true"
+        android:fontFamily="@font/harrytitle"
         android:onClick="profesors"
+        android:text="@string/profesores"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStudents" />
 
@@ -110,5 +110,18 @@
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleMain" />
+
+    <ImageButton
+        android:id="@+id/ibtnMusic"
+        android:layout_width="67dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/blue"
+        android:contentDescription="@string/music"
+        android:onClick="enableMusic"
+        android:src="@drawable/music_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProfesors" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
