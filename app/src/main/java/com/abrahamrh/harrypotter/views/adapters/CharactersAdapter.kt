@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.abrahamrh.harrypotter.R
 import com.abrahamrh.harrypotter.databinding.CharacterElementBinding
 import com.abrahamrh.harrypotter.model.Character
 import com.bumptech.glide.Glide
@@ -31,13 +32,32 @@ class CharactersAdapter(
     override fun getItemCount(): Int = characters.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvName.text = characters[position].name
-        holder.tvCasa.text = characters[position].house
-        holder.tvGender.text = characters[position].gender
-        holder.tvActor.text = characters[position].actor
-        Glide.with(context)
-            .load(characters[position].image)
-            .into(holder.ivThumbnail)
+        val character = characters[position]
+        holder.tvName.text = character.name
+        holder.tvCasa.text = if(character.house == "") {
+            context.getString(R.string.notFound)
+        } else {
+            character.house
+        }
+        holder.tvGender.text = if(character.gender == "") {
+            context.getString(R.string.notFound)
+        } else {
+            character.gender
+        }
+        holder.tvActor.text = if(character.actor == "") {
+            context.getString(R.string.notFound)
+        } else {
+            character.actor
+        }
+        if(character.image == ""){
+            Glide.with(context)
+                .load(R.drawable.character_icon)
+                .into(holder.ivThumbnail)
+        } else {
+            Glide.with(context)
+                .load(characters[position].image)
+                .into(holder.ivThumbnail)
+        }
         holder.itemView.setOnClickListener {
             clickedListener(characters[position])
         }

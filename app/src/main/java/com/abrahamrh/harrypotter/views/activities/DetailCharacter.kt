@@ -23,6 +23,7 @@ class DetailCharacter : AppCompatActivity() {
         binding = ActivityDetailCharacterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val bundle = intent.extras
         val id = bundle?.getString("id", "")
 
@@ -30,30 +31,59 @@ class DetailCharacter : AppCompatActivity() {
             .create(HarryPotterAPI::class.java)
             .getCharacter(id)
 
-        Log.d("DEBUG", "request - ${call.request()}")
         call.enqueue(object: Callback<ArrayList<CharacterDetail>> {
             override fun onResponse(
                 call: Call<ArrayList<CharacterDetail>>,
                 response: Response<ArrayList<CharacterDetail>>
             ) {
-                Log.d("DEBUG", "response - ${response.body()}")
                 binding.pbConexion.visibility = View.GONE
                 val character = response.body()!![0]
-                binding.tvDetailName.text = character.name
-                binding.tvAncestry.text = character.ancestry
-                binding.tvHouse.text = character.house
-                binding.tvSpecie.text =  character.species
-                binding.tvPatronus.text = character.patronus
-                binding.tvDateBirth.text = character.dateOfBirth
+                binding.tvDetailName.text =  if(character.name.equals("")){
+                    getString(R.string.notFound)
+                } else {
+                    character.name
+                }
+                binding.tvAncestry.text =  if(character.ancestry.equals("")){
+                    getString(R.string.notFound)
+                } else {
+                    character.ancestry
+                }
+                binding.tvHouse.text =  if(character.house.equals("")){
+                    getString(R.string.notFound)
+                } else {
+                    character.house
+                }
+                binding.tvSpecie.text =  if(character.species.equals("")){
+                    getString(R.string.notFound)
+                } else {
+                    character.species
+                }
+                binding.tvPatronus.text = if(character.patronus.equals("")) {
+                    getString(R.string.notFound)
+                } else {
+                    character.patronus
+                }
+                Log.d("DEBUG","fecha - ${character.dateOfBirth}")
+                binding.tvDateBirth.text = if(character.dateOfBirth == null) {
+                    getString(R.string.notFound)
+                } else {
+                    character.dateOfBirth
+                }
                 binding.tvWizard.text = if(character.wizard!!){
                     getString(R.string.Si)
                 } else {
                     getString(R.string.No)
                 }
 
-                Glide.with(this@DetailCharacter)
-                    .load(character.image)
-                    .into(binding.ivImage)
+                if(character.image == ""){
+                    Glide.with(this@DetailCharacter)
+                        .load(R.drawable.character_icon)
+                        .into(binding.ivImage)
+                } else {
+                    Glide.with(this@DetailCharacter)
+                        .load(character.image)
+                        .into(binding.ivImage)
+                }
             }
             override fun onFailure(call: Call<ArrayList<CharacterDetail>>, t: Throwable) {
                 Log.d("DEBUG", "Failure")
