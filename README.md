@@ -2,7 +2,7 @@
 Application to see the characters of the Harry Potter saga and some of their characteristics consuming the open Harry Potter API.
 
 ## Demo
-!()[https://i.imgur.com/5xv5iQk.jpg]
+![](https://i.imgur.com/5xv5iQk.jpg)
 
 ## Features
 * You can choose to see information about the professors in howards or the students.
